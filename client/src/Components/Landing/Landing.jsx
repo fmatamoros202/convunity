@@ -12,7 +12,7 @@ function Landing(props) {
 
     return (
         <>
-        <h1>Landing Page</h1>
+        <h1>Convunity Landing Page</h1>
         <form onSubmit={onSubmit}>
             <h2>Sign-In</h2>
             <label>Username</label>
