@@ -6,8 +6,7 @@ function Dashboard(props) {
     return (
         <div>
             <h1>Welcome User</h1>
-            <Link to='/chat'><div>Join Lobby</div></Link>
-
+            <Link to='/chat'><div>Lobby</div></Link>
         </div>
     );
 }
