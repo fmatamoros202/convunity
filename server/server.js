@@ -5,7 +5,7 @@ const cors = require('cors');
 
 const io = require('socket.io')(server, {
     cors:{
-        origin: '*',
+        origin: server,
         methods: ['GET','POST']
     }
 });
@@ -19,12 +19,12 @@ app.get('/', (req, res)=>{
 })
 
 io.on('connection', (socket)=>{
-    socket.emit('me', socket.id);
+    // socket.emit('me', socket.id);
     console.log(socket.id);
 
-    socket.on('disconnect', ()=>{
-        socket.broadcast.emit('')
-    })
+    // socket.on('disconnect', ()=>{
+    //     socket.broadcast.emit('')
+    // })
 
 })
 
