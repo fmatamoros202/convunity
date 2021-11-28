@@ -5,7 +5,7 @@ import  Peer  from 'simple-peer';
 
 function Chat(props) {
 
-    const socket = io('http://localhost:8080');
+    const socket = io('https://convunity.herokuapp.com');
 
     const [stream, setStream] = useState(null);
     const [me, setMe] = useState('');
@@ -20,7 +20,7 @@ function Chat(props) {
     const connectionRef = useRef();
 
     useEffect(()=>{
-        const socket = io('http://localhost:8080');
+        const socket = io('https://convunity.herokuapp.com');
         navigator.mediaDevices.getUserMedia({video:true, audio:true})
             .then((currentStream)=>{
                 setStream(currentStream)
@@ -85,10 +85,11 @@ function Chat(props) {
         <>
             <h1>Video Chat</h1>
             <h2>Hello {name || 'User'}</h2>
+            <p>Your id is {me}</p>
             <div>
                 {
                     stream && (
-                        <video playsInline ref={myVideo} autoPlay muted width="250" height="250">
+                        <video ref={myVideo} autoPlay muted playsInline width="250" height="250">
                         </video>
                     )
                 }
@@ -96,7 +97,7 @@ function Chat(props) {
                     callAccepted && !callEnded && (
                         <>
                         <h3>Hi! {call.name || 'User'}</h3>
-                        <video playsInline ref={userVideo} autoPlay width="250" height="250">
+                        <video  ref={userVideo} autoPlay playsInline width="250" height="250">
                         </video>
                         </>
                     )
