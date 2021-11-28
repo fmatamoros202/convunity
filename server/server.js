@@ -20,23 +20,18 @@ app.get('/', (req, res)=>{
 })
 
 io.on('connection', (socket)=>{
-    // socket.emit('me', socket.id);
-    // console.log(socket.id);
-    socket.nickname = "fer"
-
-    // socket.on('disconnect', ()=>{
-    //     socket.broadcast.emit('')
-    // })
-
-    // socket.on('custom-event', (number, string)=>{
-    //     console.log(number,string);
-    // })
-    socket.on('join-room', room =>{
-        socket.join(room);
-        console.log(room);
-        console.log(socket.id)
+    socket.emit('me', socket.id)
+    socket.on('disconnect', ()=>{
+        socket.broadcast.emit('callended');
     })
 
+    socket.on('calluser', ({userToCall, signalData, from, name })=>{
+        io.to(userToCall).emit('calluser', {signal: signalData, from, name});
+    })
+
+    socket.on('answercall', (data)=>{
+        io.to(data.to).emit('callaccepted', data.signal)
+    })
 
 })
 
