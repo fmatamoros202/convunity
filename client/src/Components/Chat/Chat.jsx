@@ -1,6 +1,6 @@
 import React, {useEffect, useState, useRef} from 'react';
 import {Link} from 'react-router-dom';
-import { io } from 'socket.io-client';
+import  io  from 'socket.io-client';
 import  Peer  from 'simple-peer';
 
 function Chat(props) {
@@ -104,8 +104,8 @@ function Chat(props) {
                 }
                 <section>
                     {/* <form> */}
-                        <label>Account Info</label>
-                        <input placeholder="name" value={name} onChange={(e)=>setName(e.target.value)}></input>
+                        <label>Name</label>
+                        <input placeholder="Please write your name" value={name} onChange={(e)=>setName(e.target.value)}></input>
                         <label>Make a Call</label>
                         <input placeholder ="Id to Call" value={idToCall} onChange={(e)=>setIdToCall(e.target.value)}></input>
                         {
