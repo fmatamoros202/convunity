@@ -5,39 +5,10 @@ import Peer from 'peerjs';
 
 function Chat(props) {
 
-    // const socket = io('http://localhost:5000');
-
-    // const myPeer = new Peer({
-    //     host: '/',
-    //     port: '5001'
-    // })
-
-    // const room = props.match.url
 
     const myVideo = useRef();
     const userVideo = useRef()
 
-
-    // myPeer.on('open', id =>{
-    //     socket.emit('join-room', room , id)
-    // })
-
-    // myPeer.on('call', call=>{
-    //     call.answer(stream)
-    //     console.log('test')
-    // })
-
-    // socket.on('user-connected', userId=>{
-    //     console.log('User connected: '+ userId)
-    //     const call = myPeer.call(userId,stream)
-    //     // call.on('stream', stream=>{
-    //     //     // setUserStream(stream)
-
-    //     //     userVideo.current.srcObject = stream
-    //     // })
-    //     console.log(call)
-
-    // })
 
     const [stream, setStream] = useState(null);
     const [userStream, setUserStream] = useState(null);
