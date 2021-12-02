@@ -51,6 +51,7 @@ function Chat(props) {
 
         peer.signal(call.signal);
 
+
         connectionRef.current = peer;
     }
 
