@@ -7,12 +7,17 @@ input {
 }
 
 .header-section {
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  margin-bottom: 1rem;
 }
 
 .infobar {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 1rem;
 }
 .logo {
   display: flex;
@@ -27,12 +32,14 @@ input {
   display: flex;
   align-items: center;
   margin: 1rem 0;
+  width: 100%;
 
   &__input {
-    border: blueviolet solid 0.025rem;
+    border: rgba(137, 43, 226, 0.322) solid 0.025rem;
     border-radius: 1rem;
-    margin: 0.25rem 0;
+    margin: 0.25rem 0.25rem;
     height: 1.25rem;
+    text-indent: 0.25rem;
   }
   &__button {
     display: flex;
@@ -40,31 +47,59 @@ input {
     justify-content: center;
     border-radius: 1rem;
     border: none;
-    background-color: aqua;
+    background-color: #4adede;
     height: 1.25rem;
     font-size: 1rem;
     padding: 1rem;
     margin-top: 0.5rem;
+    width: 80%;
+    cursor: pointer;
   }
 }
 
-.form-inner-elements {
+.form-inner-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .link {
   text-decoration: none;
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: blueviolet;
   color: white;
   padding: 0.5rem;
   border-radius: 1rem;
+  width: 80%;
+  padding: 0.5rem 0rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
 }
 
-.hero {
-  background-color: grey;
+.main {
+  margin: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
 
-  height: 80vh;
+  &__container {
+    display: flex;
+    border: solid rgba(137, 43, 226, 0.322) 0.025rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    width: 60vw;
+    height: 35vh;
+    background-color: whitesmoke;
+
+    &--off-position {
+      align-self: flex-end;
+    }
+  }
+}
+
+.footer {
+  background-color: #4adede;
+  height: 10vh;
 }

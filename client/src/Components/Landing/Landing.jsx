@@ -16,18 +16,31 @@ function Landing(props) {
             <div className='infobar'>
                 <img src={logo} className="logo" alt="convunity logo"/>
                 <form className ="form" onSubmit={onSubmit}>
-                    <div className="form-inner-elements">
-                        <input className="form__input" placeholder="Username"></input>
-                        <input className="form__input" placeholder="Password"></input>
+                    <div className="form-inner-container">
+                        <div className="input-form">
+                            <input className="form__input" placeholder="Username"></input>
+                            <input className="form__input" placeholder="Password"></input>
+                        </div>
                         <button className="form__button">Log in</button>
                     </div>
                 </form>
                 <Link to='/register' className="link"><div>Sign up for free</div></Link>
             </div>
-            <section className="hero">
-                <h1>Convunity Landing Page</h1>
-            </section>
         </header>
+        <section className="main">
+            <div className="main__container">
+                <h2>What's Convunity</h2>
+            </div>
+            <div className="main__container main__container--off-position">
+                <h2>Convunity Landing Page</h2>
+            </div>
+            <div className="main__container">
+                <h2>Convunity Landing Page</h2>
+            </div>
+        </section>
+        <footer className="footer">
+
+        </footer>
         </>
     );
 }
