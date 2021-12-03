@@ -64,6 +64,11 @@ input {
   width: 100%;
 }
 
+// .input-form {
+//   display: flex;
+//   flex-direction: column;
+// }
+
 .link {
   text-decoration: none;
   display: flex;
@@ -74,6 +79,7 @@ input {
   padding: 0.5rem;
   border-radius: 1rem;
   width: 80%;
+  width: 10rem;
   padding: 0.5rem 0rem;
   cursor: pointer;
   margin-bottom: 1rem;
@@ -83,7 +89,8 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 95%;
+  margin: 0 auto;
 
   &__image {
     width: 60%;
@@ -104,12 +111,12 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
-    // border: solid rgba(137, 43, 226, 0.322) 0.025rem;
-    margin: 1rem;
+    border: solid rgba(137, 43, 226, 0.322) 0.025rem;
+    box-shadow: 0.25rem 0.25rem 1rem rgba(137, 43, 226, 0.322);
+    margin: 2rem 1rem;
     border-radius: 0.5rem;
-    width: 60vw;
-    // height: 20rem;
-    // background-color: whitesmoke;
+    width: 70vw;
+    padding: 0.5rem;
 
     &--off-position {
       align-self: flex-end;
