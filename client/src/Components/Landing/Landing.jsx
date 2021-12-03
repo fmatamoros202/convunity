@@ -2,6 +2,9 @@ import './Landing.scss';
 import {Link} from 'react-router-dom';
 import logo from '../../assets/logo/logo-main.png';
 import logoGirl from '../../assets/images/logo-girl.png';
+import quote from '../../assets/images/hero.png';
+import quote2 from '../../assets/images/quote.png';
+import quote3 from '../../assets/images/quote2.png';
 
 function Landing(props) {
 
@@ -24,18 +27,34 @@ function Landing(props) {
                         <button className="form__button">Log in</button>
                     </div>
                 </form>
-                <Link to='/register' className="link"><div>Sign up for free</div></Link>
             </div>
         </header>
+        <div className="hero">
+            <img className="hero__image" src={quote}/>
+            <div className="hero__container">
+                <h3>The best app for language fluency!</h3>
+                <p></p>
+                <Link to='/register' className="link"><div>Sign up for free</div></Link>
+            </div>
+        </div>
         <section className="main">
             <div className="main__container">
-                <h2>What's Convunity</h2>
+                <img className="main__container__image" src={quote}/>
+                <h3>What's Convunity</h3>
+                <p></p>
+                <Link to='/register' className="link"><div>Sign up for free</div></Link>
             </div>
             <div className="main__container main__container--off-position">
-                <h2>Convunity Landing Page</h2>
+                <img className="main__container__image" src={quote2}/>
+                <h3>Convunity Landing Page</h3>
+                <p></p>
+                <Link to='/register' className="link"><div>Sign up for free</div></Link>
             </div>
             <div className="main__container">
-                <h2>Convunity Landing Page</h2>
+                <img className="main__container__image" src={quote3}/>
+                <h3>Convunity Landing Page</h3>
+                <p></p>
+                <Link to='/register' className="link"><div>Sign up for free</div></Link>
             </div>
         </section>
         <footer className="footer">
