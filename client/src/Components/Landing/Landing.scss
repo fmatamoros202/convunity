@@ -1,5 +1,11 @@
+@use '../../styles/partials/fonts';
+
+html {
+  font-family: "Roboto";
+}
 body {
   margin: 0;
+  //   font-family: "Roboto";
 }
 
 input {
@@ -54,6 +60,7 @@ input {
     margin-top: 0.5rem;
     width: 80%;
     cursor: pointer;
+    font-family: "Roboto";
   }
 }
 
