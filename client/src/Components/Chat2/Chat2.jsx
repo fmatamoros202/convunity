@@ -1,4 +1,6 @@
 import React, { useRef, useState, useEffect} from 'react';
+import './Chat2.scss';
+import logo from '../../assets/logo/logo-main.png'
 import {Link} from 'react-router-dom';
 import  io  from 'socket.io-client';
 import Peer from 'peerjs';
@@ -61,17 +63,25 @@ function Chat(props) {
 
     return (
         <>
-            <h1>Video Chat</h1>
-            <h2>Hello User1</h2>
-            <p>Your id is {Id}</p>
-            <div>
-                <video  ref={myVideo} autoPlay muted playsInline width="250" height="250">
+        <div>
+            <header className="header">
+                <div>
+                    <img src={logo} className="register-logo" alt="convunity logo"/>
+                </div>
+            </header>
+            <div className="video-container">
+                <h2>Hello User1</h2>
+                <p>Your id is {Id}</p>
+                <video className="video-container__video" ref={myVideo} autoPlay muted playsInline width="250" height="250">
                 </video>
-                <h3>Hi! User2</h3>
-                <video   ref ={userVideo} autoPlay playsInline width="250" height="250">
+                <Link className="link"to='/dashboard'><div>End Call</div></Link>
+            </div>
+            <div className="video-container">
+                <h2>Hi! User2</h2>
+                <video  className="video-container__video" ref ={userVideo} autoPlay playsInline width="250" height="250">
                 </video>
             </div>
-            <Link to='/dashboard'><div>End Call</div></Link>
+        </div>
         </>
     );
 }

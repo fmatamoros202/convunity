@@ -1,0 +1,9 @@
+@use '../../styles/partials/mixins';
+
+.video-container {
+  @include mixins.card;
+
+  &__video {
+    border-radius: 50%;
+  }
+}
