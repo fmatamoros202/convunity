@@ -24,3 +24,47 @@
   border-radius: 0.5rem;
   padding: 0.5rem;
 }
+
+@mixin input {
+  border: rgba(137, 43, 226, 0.322) solid 0.025rem;
+  border-radius: 1rem;
+  margin: 0.25rem 0.25rem;
+  height: 1.25rem;
+  text-indent: 0.25rem;
+}
+
+@mixin link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blueviolet;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  width: 80%;
+  width: 10rem;
+  padding: 0.5rem 0rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+// Media queries
+
+// @mixin mobile-size {
+//   @media screen and (min-width: 766px) {
+//     @content;
+//   }
+// }
+
+@mixin tablet-size {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop-size {
+  @media screen and (min-width: 1279px) {
+    @content;
+  }
+}
