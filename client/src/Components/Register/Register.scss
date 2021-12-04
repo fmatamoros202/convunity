@@ -1,0 +1,65 @@
+@use '../../styles/partials/mixins';
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-logo {
+  display: flex;
+  margin: 0;
+  width: 8rem;
+  height: 4rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+}
+
+.register-main {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__container {
+    @include mixins.card;
+    // width: 90vw;
+    // width: 90%;
+    display: flex;
+    flex-direction: column;
+
+    &__image {
+      //   width: 50%; use forr tablet and desktop
+      height: 15rem;
+      border-radius: 0.5rem;
+      margin: 1rem;
+      object-fit: cover;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.register-subtext {
+  width: 100%;
+  text-align: center;
+}
+.register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.register-button {
+  @include mixins.button;
+}

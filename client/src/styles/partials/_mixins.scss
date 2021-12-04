@@ -1,0 +1,26 @@
+@mixin button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  border: none;
+  background-color: #4adede;
+  height: 1.25rem;
+  font-size: 1rem;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  width: 80%;
+  cursor: pointer;
+  font-family: "Roboto";
+}
+
+@mixin card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid rgba(137, 43, 226, 0.322) 0.025rem;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(137, 43, 226, 0.322);
+  margin: 2rem 1rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
