@@ -1,9 +1,9 @@
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import Landing from './Components/Landing/Landing';
-import Dashboard from './Components/Dashboard/Dashboard';
-// import Chat from './Components/Chat/Chat';
-import Chat2 from './Components/Chat2/Chat2';
-import Register from './Components/Register/Register';
+import Landing from './Pages/Landing/Landing';
+import Dashboard from './Pages/Dashboard/Dashboard';
+// import Chat from './Pages/Chat/Chat';
+import Chat2 from './Pages/Chat2/Chat2';
+import Register from './Pages/Register/Register';
 
 function App() {
   return (

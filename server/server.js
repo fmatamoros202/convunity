@@ -1,9 +1,9 @@
 const express = require('express');
-const {ExpressPeerServer} = require('peer');
+// const {ExpressPeerServer} = require('peer');
 const app = express();
 const server = require('http').createServer(app);
 const cors = require('cors');
-const {v4: uuidV4 } = require('uuid');
+// const {v4: uuidV4 } = require('uuid');
 
 const io = require('socket.io')(server, {
     pingTimeout: 2000,

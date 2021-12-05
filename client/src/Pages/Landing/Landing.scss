@@ -22,16 +22,28 @@ input {
 
 .infobar {
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   margin: 0 1rem;
+
+  &__button {
+    @include mixins.button;
+    width: 5rem;
+    border-radius: 0.25rem;
+
+    &:hover {
+      background-color: blueviolet;
+      color: whitesmoke;
+    }
+  }
 }
 .logo {
   display: flex;
-  margin: 0;
+  // margin: 0;
   width: 8rem;
   height: 4rem;
-  margin-top: 1rem;
+  margin: 1rem 0rem;
   border-radius: 1rem;
 }
 

@@ -1,5 +1,7 @@
 import './Landing.scss';
 import {Link} from 'react-router-dom';
+import React, { useState } from 'react';
+import Login from '../../Components/Login/Login';
 import logo from '../../assets/logo/logo-main.png';
 // import logoGirl from '../../assets/images/logo-girl.png';
 import hero from '../../assets/images/hero.png';
@@ -14,12 +16,14 @@ function Landing(props) {
         props.history.push("dashboard");
     }
 
+    const[show,setShow] = useState(false)
+
     return (
         <>
         <header className="header-section">
             <div className='infobar'>
                 <img src={logo} className="logo" alt="convunity logo"/>
-                <form className ="form" onSubmit={onSubmit}>
+                {/* <form className ="form" onSubmit={onSubmit}>
                     <div className="form-inner-container">
                         <div className="input-form">
                             <input className="form__input" placeholder="Username"></input>
@@ -27,7 +31,9 @@ function Landing(props) {
                         </div>
                         <button className="form__button">Log in</button>
                     </div>
-                </form>
+                </form> */}
+                <button className="infobar__button" onClick={()=>setShow(true)}>Log-In</button>
+                <Login props={props} show={show} onClose={()=>setShow(false)}/>
             </div>
         </header>
         <div className="hero">
