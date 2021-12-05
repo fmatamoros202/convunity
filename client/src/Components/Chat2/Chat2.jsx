@@ -22,11 +22,12 @@ function Chat(props) {
             setStream(currentStream)
             myVideo.current.srcObject = currentStream
 
-            const socket = io('https://convunity.herokuapp.com');
+            const socket = io('http://localhost:5000');
 
             const myPeer = new Peer({
-                host: '/',
-                port: '5001'
+                // host: '/',
+                // port: '5000',
+                // path: '/myapp'
             })
             const room = '/chat'
 
