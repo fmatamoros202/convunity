@@ -91,6 +91,7 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 90%;
   }
 }
 
@@ -98,13 +99,17 @@ input {
   margin: 1rem 1rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   &__container {
     @include mixins.card;
     width: 70vw;
 
     &--off-position {
-      align-self: flex-end;
+      @include mixins.tablet-size {
+        align-self: flex-end;
+      }
+      align-self: center;
     }
 
     &__image {
