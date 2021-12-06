@@ -15,7 +15,7 @@
 
   @include mixins.tablet-size {
     background-color: transparent;
-    width: 104.5%;
+    // width: 104.5%;
     position: absolute;
   }
 }
@@ -136,5 +136,10 @@
     width: 7rem;
     // height: 2.2rem;
     // margin-top: 1.4rem;
+    margin-right: -2.5rem;
+  }
+
+  @include mixins.desktop-size {
+    margin-right: -4.3rem;
   }
 }
