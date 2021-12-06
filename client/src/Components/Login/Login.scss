@@ -44,12 +44,7 @@
   }
 
   &__logo {
-    display: flex;
-    // margin: 0;
-    width: 8rem;
-    height: 4rem;
-    margin: 1rem 0rem;
-    border-radius: 1rem;
+    @include mixins.logo;
   }
 }
 
@@ -105,6 +100,7 @@
 
   @include mixins.tablet-size {
     flex-direction: row;
+    margin-top: 0.75rem;
   }
 }
 
@@ -130,12 +126,12 @@
   background-color: white;
   border: rgba(137, 43, 226, 0.322) solid 0.025rem;
   //   border: rgba(220, 20, 60, 0.541) solid 0.025rem;
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
 
   @include mixins.tablet-size {
     width: 7rem;
     // height: 2.2rem;
-    // margin-top: 1.4rem;
+    margin-top: 2.2rem;
     margin-right: -2.5rem;
   }
 

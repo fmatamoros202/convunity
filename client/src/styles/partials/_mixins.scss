@@ -49,6 +49,14 @@
   margin-bottom: 1rem;
 }
 
+@mixin logo {
+  display: flex;
+  width: 8rem;
+  height: 5.5rem;
+  margin: 1rem 0rem;
+  object-fit: contain;
+}
+
 // Media queries
 
 // @mixin mobile-size {

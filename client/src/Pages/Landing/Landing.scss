@@ -16,7 +16,7 @@ input {
 .header-section {
   display: flex;
   flex-direction: column;
-  background-color: whitesmoke;
+  // background-color: whitesmoke;
   margin-bottom: 1rem;
 }
 
@@ -26,6 +26,7 @@ input {
   justify-content: space-between;
   align-items: center;
   margin: 0 1rem;
+  border-bottom: rgba(137, 43, 226, 0.322) solid 0.05rem;
 
   &__button {
     @include mixins.button;
@@ -39,12 +40,7 @@ input {
   }
 }
 .logo {
-  display: flex;
-  // margin: 0;
-  width: 8rem;
-  height: 4rem;
-  margin: 1rem 0rem;
-  border-radius: 1rem;
+  @include mixins.logo;
 }
 
 .form {
