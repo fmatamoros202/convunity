@@ -30,7 +30,7 @@ input {
   &__button {
     @include mixins.button;
     width: 5rem;
-    border-radius: 0.25rem;
+    border-radius: 1rem;
 
     &:hover {
       background-color: blueviolet;
@@ -75,6 +75,18 @@ input {
 
 .link {
   @include mixins.link;
+
+  @include mixins.tablet-size {
+    margin-top: 1.5rem;
+  }
+
+  &:hover {
+    background-color: white;
+    color: blueviolet;
+    border: rgba(137, 43, 226, 0.322) solid 0.05rem;
+    box-shadow: 0.15rem 0.15rem 0.5rem rgba(137, 43, 226, 0.322);
+    height: 1.05rem;
+  }
 }
 
 .hero {
@@ -84,8 +96,16 @@ input {
   width: 95%;
   margin: 0 auto;
 
+  @include mixins.tablet-size {
+    flex-direction: row;
+  }
+
   &__image {
     width: 60%;
+
+    @include mixins.tablet-size {
+      margin-right: 2rem;
+    }
   }
   &__container {
     display: flex;
@@ -105,16 +125,42 @@ input {
     @include mixins.card;
     width: 70vw;
 
+    @include mixins.tablet-size {
+      width: 80vw;
+      margin-bottom: 3rem;
+      display: flex;
+      flex-direction: row;
+    }
+
     &--off-position {
       @include mixins.tablet-size {
         align-self: flex-end;
       }
       align-self: center;
+      box-shadow: -0.25rem 0.25rem 0.75rem rgba(137, 43, 226, 0.322);
     }
 
     &__image {
       width: 60%;
       margin: 0.5rem 0;
+
+      @include mixins.tablet-size {
+        width: 40%;
+        margin-right: 2rem;
+        margin-left: 1rem;
+        height: 20rem;
+      }
+    }
+
+    &__elements {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+
+      @include mixins.tablet-size {
+        width: 80%;
+      }
     }
   }
 }

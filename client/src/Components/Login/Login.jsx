@@ -33,7 +33,7 @@ function Login(props) {
                     </form>
                 </div>
                 <div className='modal-footer'>
-                    <button onClick={props.onClose}className='modal-close'>Close</button>
+                    <button onClick={props.onClose}className='modal-close'>Back</button>
                 </div>
             </div>
             

@@ -49,25 +49,31 @@ function Landing(props) {
         <section className="main">
             <div className="main__container">
                 <img className="main__container__image" src={quote2} alt="quote bubble"/>
-                <h3>Convunity = Conversation and Community</h3>
-                <p>When coming up with the idea for Convunity we realised that learning a new language is all about becoming conversationally adept.</p>
-                {/* <p>Yes, reading and writing are equally important, but the greatest satisfaction of learning a language comes from the ability to sustain conversations.</p>
-                <p>Convunity is an easy-to-use app that lets you have short conversations with native speakers in the language you are learning and practicing.</p> */}
-                <Link to='/register' className="link"><div>Sign up for free</div></Link>
+                <div className="main__container__elements">
+                    <h3>Convunity = Conversation and Community</h3>
+                    <p>When coming up with the idea for Convunity we realised that learning a new language is all about becoming conversationally adept.</p>
+                    {/* <p>Yes, reading and writing are equally important, but the greatest satisfaction of learning a language comes from the ability to sustain conversations.</p>
+                    <p>Convunity is an easy-to-use app that lets you have short conversations with native speakers in the language you are learning and practicing.</p> */}
+                    <Link to='/register' className="link"><div>Sign up for free</div></Link>
+                </div>
             </div>
             <div className="main__container main__container--off-position">
                 <img className="main__container__image" src={quote4} alt="quote bubble"/>
-                <h3>We know simple is better.</h3>
-                <p>Convunity works under the premise that humans are active and busy individuals. We need instant access to the things we like to do.</p>
-                <p>Convunity will showcase a lobby-type format in which the user will see available users ready to practice or ready to help others practice.</p>
-                <Link to='/register' className="link"><div>Sign up for free</div></Link>
+                <div className="main__container__elements">
+                    <h3>We know simple is better.</h3>
+                    <p>Convunity works under the premise that humans are active and busy individuals. We need instant access to the things we like to do.</p>
+                    <p>Convunity will showcase a lobby-type format in which the user will see available users ready to practice or ready to help others practice.</p>
+                    <Link to='/register' className="link"><div>Sign up for free</div></Link>
+                </div>
             </div>
             <div className="main__container">
                 <img className="main__container__image" src={quote3} alt="quote bubble"/>
-                <h3>Convunity at a glimpse...</h3>
-                <p>We are an easy-to-use video chat app.</p>
-                <p>We are not a beginners app. Basic conversational skills are required.</p>
-                <Link to='/register' className="link"><div>Sign up for free</div></Link>
+                <div className="main__container__elements">
+                    <h3>Convunity at a glimpse...</h3>
+                    <p>We are an easy-to-use video chat app.</p>
+                    <p>We are not a beginners app. Basic conversational skills are required.</p>
+                    <Link to='/register' className="link"><div>Sign up for free</div></Link>
+                </div>
             </div>
         </section>
         <footer className="footer">
