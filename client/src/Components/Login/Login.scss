@@ -87,6 +87,11 @@
       margin-top: 0.5rem;
       margin-left: 1rem;
     }
+
+    &:hover {
+      background-color: blueviolet;
+      color: whitesmoke;
+    }
   }
 }
 
