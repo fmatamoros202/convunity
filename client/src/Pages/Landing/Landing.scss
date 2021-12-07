@@ -164,4 +164,42 @@ input {
 .footer {
   background-color: #4adede;
   height: 10rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__logo {
+    @include mixins.logo;
+    margin-right: 1rem;
+  }
+
+  &__link {
+    display: flex;
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    margin-right: 4rem;
+    margin-left: 2rem;
+    padding: 0.2rem;
+    // animation-name: showcase;
+    // animation-duration: 2s;
+    // animation-iteration-count: infinite;
+    &:hover {
+      border-bottom: rgba(137, 43, 226, 0.322) solid 0.25rem;
+    }
+
+    @include mixins.tablet-size {
+      margin-right: 8rem;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@keyframes showcase {
+  0% {
+    color: black;
+  }
+  100% {
+    color: white;
+  }
 }
