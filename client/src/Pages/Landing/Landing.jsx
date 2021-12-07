@@ -40,11 +40,11 @@ function Landing(props) {
         <div className="hero">
             <img className="hero__image" src={hero} alt="different chat bubbles"/>
             <div className="hero__container">
-                <h3>What's Convunity?</h3>
+                <h3>What is Convunity?</h3>
                 <p>Convunity is language fluency made easy!</p>
                 <p>Use convunity to have fast conversations with native speakers to help you supplement your language learning journey.</p>
                 <p>Choose the language you want to practice and your native language and voila! You are ready to practice and help others.</p>
-                <Link to='/register' className="link"><div>Join for Beta Testing</div></Link>
+                <Link to='/register' className="link"><div>Beta Testing</div></Link>
             </div>
         </div>
         <section className="main">
@@ -55,7 +55,7 @@ function Landing(props) {
                     <p>When coming up with the idea for Convunity we realised that learning a new language is all about becoming conversationally adept.</p>
                     {/* <p>Yes, reading and writing are equally important, but the greatest satisfaction of learning a language comes from the ability to sustain conversations.</p>
                     <p>Convunity is an easy-to-use app that lets you have short conversations with native speakers in the language you are learning and practicing.</p> */}
-                    <Link to='/register' className="link"><div>Join for Beta Testing</div></Link>
+                    <Link to='/register' className="link"><div>Beta Testing</div></Link>
                 </div>
             </div>
             <div className="main__container main__container--off-position">
@@ -64,7 +64,7 @@ function Landing(props) {
                     <h3>We know simple is better.</h3>
                     <p>Convunity works under the premise that humans are active and busy individuals. We need instant access to the things we like to do.</p>
                     <p>Convunity will showcase a lobby-type format in which the user will see available users ready to practice or ready to help others practice.</p>
-                    <Link to='/register' className="link"><div>Join for Beta Testing</div></Link>
+                    <Link to='/register' className="link"><div>Beta Testing</div></Link>
                 </div>
             </div>
             <div className="main__container">
@@ -73,7 +73,7 @@ function Landing(props) {
                     <h3>Convunity at a glimpse...</h3>
                     <p>We are an easy-to-use video chat app.</p>
                     <p>We are not a beginners app. Basic conversational skills are required.</p>
-                    <Link to='/register' className="link"><div>Join for Beta Testing</div></Link>
+                    <Link to='/register' className="link"><div>Beta Testing</div></Link>
                 </div>
             </div>
         </section>

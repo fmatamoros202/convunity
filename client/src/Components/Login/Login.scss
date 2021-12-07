@@ -62,13 +62,7 @@
   width: 100%;
 
   &__input {
-    // @include mixins.input;
-    border: none;
-    border-bottom: rgba(137, 43, 226, 0.322) solid 0.025rem;
-    background-color: white;
-    margin-top: 1rem;
-    font-size: 1rem;
-    text-indent: 0.25rem;
+    @include mixins.input;
 
     @include mixins.tablet-size {
       margin-left: 0.5rem;

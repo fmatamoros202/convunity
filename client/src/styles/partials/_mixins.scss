@@ -26,10 +26,16 @@
 }
 
 @mixin input {
-  border: rgba(137, 43, 226, 0.322) solid 0.025rem;
-  border-radius: 1rem;
-  margin: 0.25rem 0.25rem;
-  height: 1.25rem;
+  // border: rgba(137, 43, 226, 0.322) solid 0.025rem;
+  // border-radius: 1rem;
+  // margin: 0.25rem 0.25rem;
+  // height: 1.25rem;
+  // text-indent: 0.25rem;
+  border: none;
+  border-bottom: rgba(137, 43, 226, 0.322) solid 0.025rem;
+  background-color: white;
+  margin-top: 1rem;
+  font-size: 1rem;
   text-indent: 0.25rem;
 }
 
