@@ -38,7 +38,7 @@ function Register(props) {
                     </Link>
                 </div>
             </header>
-            <h1 className="register-main__title">Become an Early Tester!</h1>
+            <h1 className="register-main__title">Become an early Tester!</h1>
             <div className="register-main">
                 <div className="register-main__container">
                     <img className="register-main__container__image" src={logoGirl} alt="A woman chatting on her phone"></img>
