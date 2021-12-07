@@ -4,10 +4,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include mixins.tablet-size {
+    align-items: flex-start;
+  }
 }
 
 .dashboard-logo {
   @include mixins.logo;
+
+  @include mixins.tablet-size {
+    margin-left: 2rem;
+  }
 }
 
 .dashboard-main {
@@ -28,12 +36,22 @@
     display: flex;
     flex-direction: column;
 
+    @include mixins.tablet-size {
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-bottom: 4rem;
+    }
+
     &__image {
       //   width: 50%; use forr tablet and desktop
-      height: 15rem;
+      height: 9rem;
       border-radius: 0.5rem;
       margin: 1rem;
       object-fit: cover;
+
+      @include mixins.tablet-size {
+        height: 20rem;
+      }
     }
 
     &__info {
@@ -41,7 +59,20 @@
       flex-direction: column;
       align-items: center;
     }
+
+    &__box {
+      @include mixins.card;
+      width: 10rem;
+      box-shadow: none;
+      border: solid #4adede 0.025rem;
+    }
   }
+}
+
+.dashboard-main-inner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .dashboard-subtext {
@@ -53,5 +84,22 @@
   @include mixins.link;
 }
 
-.footer {
+.dashboard-footer {
+  background-color: #4adede;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include mixins.tablet-size {
+    justify-content: flex-end;
+  }
+
+  &__logo {
+    @include mixins.logo;
+
+    @include mixins.tablet-size {
+      margin-right: 2rem;
+    }
+  }
 }

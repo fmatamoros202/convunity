@@ -31,7 +31,7 @@ function Register(props) {
     }
     return (
         <>
-            <header className="header">
+            <header className="register-header">
                 <div>
                     <Link to="/">
                         <img src={logo} className="register-logo" alt="convunity logo"/>
