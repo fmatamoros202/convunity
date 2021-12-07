@@ -8,7 +8,7 @@ import logoGirl from '../../assets/images/logo-girl.png';
 
 function Register(props) {
 
-    const [error, setError] = useState('')
+    const [error, setError] = useState('');
 
 
     let onSubmit = (e)=>{

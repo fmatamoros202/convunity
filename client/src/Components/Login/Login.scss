@@ -68,6 +68,10 @@
       margin-left: 0.5rem;
     }
 
+    &--error {
+      border-bottom: red solid 0.05rem;
+    }
+
     &:focus {
       outline: none;
       border-bottom: rgba(137, 43, 226, 0.322) solid 0.05rem;
