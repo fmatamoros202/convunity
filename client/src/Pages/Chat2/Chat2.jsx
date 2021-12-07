@@ -67,20 +67,24 @@ function Chat(props) {
         <div>
             <header className="header">
                 <div>
-                    <img src={logo} className="register-logo" alt="convunity logo"/>
+                    <img src={logo} className="chat-logo" alt="convunity logo"/>
                 </div>
             </header>
-            <div className="video-container">
-                <h2>Hello User1</h2>
-                <p>Your id is {Id}</p>
-                <video className="video-container__video" ref={myVideo} autoPlay muted playsInline width="250" height="250">
-                </video>
+            <div className="chat-container">
+                <div className="chat-container__videos">
+                    <div className="video-container">
+                        <h2 className="video-container__header">Hello User1</h2>
+                        <p className="video-container__text">Your id is <span>{Id}</span></p>
+                        <video className="video-container__video video-container__video--user" ref={myVideo} autoPlay muted playsInline width="250" height="250">
+                        </video>
+                    </div>
+                    <div className="video-container">
+                        <video  className="video-container__video" ref ={userVideo} autoPlay playsInline width="250" height="250">
+                        </video>
+                        <h2 className="video-container__header--user2">Hi!! User2</h2>
+                    </div>
+                </div>
                 <Link className="link"to='/dashboard'><div>End Call</div></Link>
-            </div>
-            <div className="video-container">
-                <h2>Hi! User2</h2>
-                <video  className="video-container__video" ref ={userVideo} autoPlay playsInline width="250" height="250">
-                </video>
             </div>
         </div>
         </>

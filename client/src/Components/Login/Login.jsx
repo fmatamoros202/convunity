@@ -31,8 +31,8 @@ function Login(props) {
                     <form className ="modal-form" onSubmit={onSubmit}>
                         <div className="modal-form-inner-container">
                             <div className="modal-input-form">
-                                <input className={"modal-form__input "+error} placeholder="User Name" name="username"></input>
-                                <input className={"modal-form__input "+error} type="password" placeholder="Password" name="password"></input>
+                                <input className={"modal-form__input "+error} placeholder="User Name" name="username" autocpmplete="off"></input>
+                                <input className={"modal-form__input "+error} type="password" placeholder="Password" name="password" autocpmplete="off"></input>
                             </div>
                             <button className="modal-form__button">Log in</button>
                         </div>

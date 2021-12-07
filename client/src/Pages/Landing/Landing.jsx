@@ -12,10 +12,10 @@ import quote4 from '../../assets/images/quote4.png';
 
 function Landing(props) {
 
-    let onSubmit = (e)=>{
-        e.preventDefault();
-        props.history.push("dashboard");
-    }
+    // let onSubmit = (e)=>{
+    //     e.preventDefault();
+    //     props.history.push("dashboard");
+    // }
 
     const[show,setShow] = useState(false)
 
@@ -70,7 +70,7 @@ function Landing(props) {
             <div className="main__container">
                 <img className="main__container__image" src={quote3} alt="quote bubble"/>
                 <div className="main__container__elements">
-                    <h3>Convunity at a glimpse...</h3>
+                    <h3>Convunity at a glance...</h3>
                     <p>We are an easy-to-use video chat app.</p>
                     <p>We are not a beginners app. Basic conversational skills are required.</p>
                     <Link to='/register' className="link"><div>Beta Testing</div></Link>
