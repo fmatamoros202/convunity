@@ -67,7 +67,7 @@ function Register(props) {
                     </div>
                     <div className="register-main__container">
                         <div className="register-main__container__info">
-                            <p className ="register-subtext">Get to know Convunity's creator</p>
+                            <p className ="register-subtext">Get to know Convunity's creator: Fernando Matamoros</p>
                             <div className ="icons-box">
                                 <a href="https://www.linkedin.com/in/fernando-matamoros" target="_blank" rel="noreferrer"><img className ="icons-box__element" src={linkedinIcon} alt='LinkedIn'></img></a>
                                 <a href="https://github.com/fmatamoros202" target="_blank" rel="noreferrer"><img className ="icons-box__element" src={githubIcon} alt='GitHub'></img></a>

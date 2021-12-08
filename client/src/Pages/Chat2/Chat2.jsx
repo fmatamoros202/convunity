@@ -25,6 +25,7 @@ function Chat(props) {
             const socket = io('https://convunity.herokuapp.com');
 
             const myPeer = new Peer({
+                //needed when incorporating the peerJS with the express server
                 // host: '/',
                 // port: '5001',
             })
@@ -37,14 +38,14 @@ function Chat(props) {
 
             myPeer.on('call', call=>{
                 call.answer(currentStream)
-                console.log('test')
+                // console.log('test')
                 call.on('stream', userVideoStream=>{
                     userVideo.current.srcObject =userVideoStream
                 })
             })
 
             socket.on('user-connected', userId=>{
-                console.log('User connected: '+ userId)
+                // console.log('User connected: '+ userId)// Needed to check connectivity from socket.io to front-end
                 const call = myPeer.call(userId,currentStream)
                 call.on('stream', stream=>{
                     setUserStream(stream)
@@ -64,7 +65,7 @@ function Chat(props) {
     return (
         <>
         <div>
-            <header className="header">
+            <header className="chat-header">
                 <div>
                     <img src={logo} className="chat-logo" alt="convunity logo"/>
                 </div>

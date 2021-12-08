@@ -1,9 +1,8 @@
 const express = require('express');
-// const {ExpressPeerServer} = require('peer');
+// const {ExpressPeerServer} = require('peer'); Needed when adding the peerjs server to the express server.
 const app = express();
 const server = require('http').createServer(app);
 const cors = require('cors');
-// const {v4: uuidV4 } = require('uuid');
 
 const io = require('socket.io')(server, {
     pingTimeout: 2000,
@@ -18,6 +17,8 @@ app.use(cors());
 
 const PORT = process.env.PORT || 5000;
 
+// needed when using peerjs server in tandem with express server
+
 // const peerServer = ExpressPeerServer(server,{
 //     debug: true,
 //     path: '/myapp'
@@ -31,7 +32,7 @@ app.get('/', (req, res)=>{
 
 io.on('connection', socket=>{
     socket.on('join-room', (room, userId)=>{
-        console.log(room, userId)
+        // console.log(room, userId) This checks the room and user that need to connect
         socket.join(room)
         socket.to(room).emit('user-connected', userId)
     })

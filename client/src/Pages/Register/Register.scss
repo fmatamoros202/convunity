@@ -89,6 +89,7 @@
 .register-button {
   @include mixins.button;
   margin-bottom: 2rem;
+  width: 12rem;
 
   &:hover {
     background-color: blueviolet;

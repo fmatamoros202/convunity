@@ -1,12 +1,21 @@
 @use '../../styles/partials/mixins';
 
+.chat-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mixins.tablet-size {
+    align-items: flex-start;
+  }
+}
+
 .chat-logo {
   @include mixins.logo;
-  width: 5rem;
-  height: 5rem;
 
   @include mixins.tablet-size {
     @include mixins.logo;
+    margin-left: 2rem;
   }
 }
 
