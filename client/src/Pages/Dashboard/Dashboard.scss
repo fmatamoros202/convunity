@@ -31,7 +31,6 @@
 
   &__container {
     @include mixins.card;
-    // width: 90vw;
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -43,14 +42,13 @@
     }
 
     &__image {
-      //   width: 50%; use forr tablet and desktop
       height: 9rem;
       border-radius: 0.5rem;
       margin: 1rem;
       object-fit: cover;
 
       @include mixins.tablet-size {
-        height: 20rem;
+        height: 18rem;
       }
     }
 

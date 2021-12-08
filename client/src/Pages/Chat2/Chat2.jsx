@@ -25,9 +25,8 @@ function Chat(props) {
             const socket = io('https://convunity.herokuapp.com');
 
             const myPeer = new Peer({
-                host: '/',
-                port: '5001'
-                
+                // host: '/',
+                // port: '5001',
             })
             const room = '/chat'
 

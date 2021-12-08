@@ -45,9 +45,7 @@ function Register(props) {
                     <div className="register-main__container__info">
                         <p className ="register-subtext">Please provide the following information:</p>
                         <form className ="register-form"onSubmit={onSubmit}>
-                            {/* <label>Name</label> */}
                             <input className ={"register-form__input "+error} placeholder="Full Name" name="name"></input>
-                            {/* <label>Username</label> */}
                             <input className ={"register-form__input "+error} placeholder="Email" name="email"></input>
                             <button className ="register-button">Join the Community</button>
                         </form>

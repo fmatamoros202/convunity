@@ -4,18 +4,12 @@ import React, { useState } from 'react';
 import Login from '../../Components/Login/Login';
 import logo from '../../assets/logo/logo-main.png';
 import logoWhite from '../../assets/logo/logo-main-w.png';
-// import logoGirl from '../../assets/images/logo-girl.png';
 import hero from '../../assets/images/hero.png';
 import quote2 from '../../assets/images/quote.png';
 import quote3 from '../../assets/images/quote2.png';
 import quote4 from '../../assets/images/quote4.png';
 
 function Landing(props) {
-
-    // let onSubmit = (e)=>{
-    //     e.preventDefault();
-    //     props.history.push("dashboard");
-    // }
 
     const[show,setShow] = useState(false)
 
@@ -24,15 +18,6 @@ function Landing(props) {
         <header className="header-section">
             <div className='infobar'>
                 <img src={logo} className="logo" alt="convunity logo"/>
-                {/* <form className ="form" onSubmit={onSubmit}>
-                    <div className="form-inner-container">
-                        <div className="input-form">
-                            <input className="form__input" placeholder="Username"></input>
-                            <input className="form__input" placeholder="Password"></input>
-                        </div>
-                        <button className="form__button">Log in</button>
-                    </div>
-                </form> */}
                 <button className="infobar__button" onClick={()=>setShow(true)}>Log-In</button>
                 <Login props={props} show={show} onClose={()=>setShow(false)}/>
             </div>
