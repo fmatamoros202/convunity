@@ -1,0 +1,141 @@
+@use '../../styles/partials/fonts';
+@use '../../styles/partials/mixins';
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.856);
+  display: flex;
+  justify-content: center;
+
+  @include mixins.tablet-size {
+    background-color: transparent;
+    position: absolute;
+    height: 10vh;
+  }
+}
+
+.modal-content {
+  width: 90%;
+  height: 22rem;
+  background-color: white;
+  margin-top: 5rem;
+  border-radius: 1rem;
+
+  @include mixins.tablet-size {
+    background-color: transparent;
+    display: flex;
+    margin-top: 0.75rem;
+  }
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 2rem;
+  @include mixins.tablet-size {
+    display: none;
+  }
+
+  &__logo {
+    @include mixins.logo;
+  }
+}
+
+.modal-body {
+  @include mixins.tablet-size {
+    margin-left: 10rem;
+  }
+}
+
+.modal-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+  width: 100%;
+
+  &__input {
+    @include mixins.input;
+
+    @include mixins.tablet-size {
+      margin-left: 0.5rem;
+    }
+
+    &--error {
+      border-bottom: red solid 0.05rem;
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom: rgba(137, 43, 226, 0.322) solid 0.05rem;
+    }
+  }
+  &__button {
+    @include mixins.button;
+    width: 5rem;
+    margin-top: 1rem;
+
+    @include mixins.tablet-size {
+      width: 5rem;
+      margin-top: 0.5rem;
+      margin-left: 1rem;
+    }
+
+    &:hover {
+      background-color: blueviolet;
+      color: whitesmoke;
+    }
+  }
+}
+
+.modal-form-inner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  @include mixins.tablet-size {
+    flex-direction: row;
+    margin-top: 0.75rem;
+  }
+}
+
+.modal-input-form {
+  display: flex;
+  flex-direction: column;
+
+  @include mixins.tablet-size {
+    flex-direction: row;
+  }
+}
+
+.modal-footer {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+.modal-close {
+  display: flex;
+  @include mixins.button;
+  width: 5rem;
+  background-color: white;
+  border: rgba(137, 43, 226, 0.322) solid 0.025rem;
+  margin-top: 0.5rem;
+
+  @include mixins.tablet-size {
+    width: 7rem;
+    margin-top: 2.2rem;
+    margin-right: -2.5rem;
+  }
+
+  @include mixins.desktop-size {
+    margin-right: -4.3rem;
+  }
+}

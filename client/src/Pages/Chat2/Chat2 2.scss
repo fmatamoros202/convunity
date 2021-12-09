@@ -1,0 +1,94 @@
+@use '../../styles/partials/mixins';
+
+.chat-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mixins.tablet-size {
+    align-items: flex-start;
+  }
+}
+
+.chat-logo {
+  @include mixins.logo;
+
+  @include mixins.tablet-size {
+    @include mixins.logo;
+    margin-left: 2rem;
+  }
+}
+
+.chat-container {
+  @include mixins.card;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+
+  @include mixins.tablet-size {
+    @include mixins.card;
+  }
+
+  &__videos {
+    display: flex;
+    flex-direction: column;
+
+    @include mixins.tablet-size {
+      flex-direction: row;
+    }
+  }
+}
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__video {
+    width: 70vw;
+    height: 20rem;
+    object-fit: fill;
+
+    @include mixins.tablet-size {
+      width: 35vw;
+      height: 20rem;
+      margin: 1rem;
+    }
+
+    &--user {
+      position: relative;
+      top: 8vh;
+      right: 20vw;
+      object-fit: fill;
+      width: 8rem;
+      height: 8rem;
+
+      @include mixins.tablet-size {
+        position: static;
+        width: 35vw;
+        height: 20rem;
+      }
+    }
+  }
+
+  &__header {
+    margin: 0;
+    position: relative;
+    top: 2rem;
+
+    @include mixins.tablet-size {
+      position: static;
+      margin: auto;
+    }
+  }
+
+  &__text {
+    margin: 0.25rem 1rem;
+    font-size: 0.75rem;
+    position: relative;
+    top: 2rem;
+
+    @include mixins.tablet-size {
+      position: static;
+    }
+  }
+}
