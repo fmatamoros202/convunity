@@ -28,7 +28,6 @@
 
   @include mixins.tablet-size {
     flex-direction: row;
-    height: 61vh;
     justify-content: space-evenly;
   }
 
